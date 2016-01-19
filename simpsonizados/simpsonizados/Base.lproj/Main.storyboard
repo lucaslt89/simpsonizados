@@ -20,27 +20,50 @@
                                 <rect key="frame" x="20" y="145" width="1880" height="915"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChapterCellIdentifier" id="hhD-Ho-TlV">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChapterCellIdentifier" id="hhD-Ho-TlV" customClass="ChapterTableViewCell" customModule="simpsonizados" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="1880" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hhD-Ho-TlV" id="sJb-i7-Rav">
                                             <rect key="frame" x="0.0" y="0.0" width="1880" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNY-eD-R79">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-OX-fhI">
                                                     <rect key="frame" x="15" y="5" width="200" height="110"/>
-                                                    <color key="backgroundColor" red="0.015686274510000001" green="0.69019607839999997" blue="0.98039215690000003" alpha="1" colorSpace="deviceRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="HGU-nq-9pU"/>
+                                                        <constraint firstAttribute="width" constant="200" id="T9y-BP-SEm"/>
                                                     </constraints>
-                                                </view>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZF-EC-V5s">
+                                                    <rect key="frame" x="229" y="47" width="1626" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-Kl-Tec">
+                                                    <rect key="frame" x="229" y="5" width="1626" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="sNY-eD-R79" firstAttribute="leading" secondItem="sJb-i7-Rav" secondAttribute="leading" constant="15" id="B7X-SU-SN9"/>
-                                                <constraint firstItem="sNY-eD-R79" firstAttribute="top" secondItem="sJb-i7-Rav" secondAttribute="top" constant="5" id="LMG-bo-zot"/>
-                                                <constraint firstAttribute="bottom" secondItem="sNY-eD-R79" secondAttribute="bottom" constant="5" id="nJS-9S-4tJ"/>
+                                                <constraint firstItem="TZF-EC-V5s" firstAttribute="leading" secondItem="2q6-Kl-Tec" secondAttribute="leading" id="287-WK-nga"/>
+                                                <constraint firstAttribute="bottom" secondItem="t6h-OX-fhI" secondAttribute="bottom" constant="5" id="5Uw-th-fLd"/>
+                                                <constraint firstItem="2q6-Kl-Tec" firstAttribute="top" secondItem="t6h-OX-fhI" secondAttribute="top" id="6ra-vu-roP"/>
+                                                <constraint firstAttribute="trailing" secondItem="2q6-Kl-Tec" secondAttribute="trailing" constant="25" id="Idp-io-45w"/>
+                                                <constraint firstItem="t6h-OX-fhI" firstAttribute="leading" secondItem="sJb-i7-Rav" secondAttribute="leading" constant="15" id="Jgn-P2-fF2"/>
+                                                <constraint firstItem="TZF-EC-V5s" firstAttribute="bottom" secondItem="t6h-OX-fhI" secondAttribute="bottom" id="OKE-FZ-JBy"/>
+                                                <constraint firstItem="2q6-Kl-Tec" firstAttribute="leading" secondItem="t6h-OX-fhI" secondAttribute="trailing" constant="14" id="PcS-SG-l0X"/>
+                                                <constraint firstItem="t6h-OX-fhI" firstAttribute="top" secondItem="sJb-i7-Rav" secondAttribute="top" constant="5" id="UYO-Vg-2cL"/>
+                                                <constraint firstItem="TZF-EC-V5s" firstAttribute="top" secondItem="2q6-Kl-Tec" secondAttribute="bottom" constant="8" id="dbj-a4-fFP"/>
+                                                <constraint firstItem="TZF-EC-V5s" firstAttribute="trailing" secondItem="2q6-Kl-Tec" secondAttribute="trailing" id="mVD-jt-xcK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chapterImageView" destination="t6h-OX-fhI" id="pWY-pN-rCe"/>
+                                            <outlet property="descriptionLabel" destination="TZF-EC-V5s" id="zKk-yJ-f67"/>
+                                            <outlet property="nameLabel" destination="2q6-Kl-Tec" id="jq9-qk-RXN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

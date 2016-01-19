@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import AlamofireImage
 
 let ShowSeasonViewControllerSegueIdentifier = "ShowSeasonViewController"
 
@@ -34,8 +35,16 @@ class SeasonViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Cells.ChapterCellIdentifier)
-        return cell!
+
+        let selectedChapter = chapters[indexPath.row]
+
+        let cell = tableView.dequeueReusableCellWithIdentifier(Cells.ChapterCellIdentifier) as! ChapterTableViewCell
+        cell.nameLabel.text = selectedChapter.name
+        cell.descriptionLabel.text = selectedChapter.chapterDescription
+        if let imageUrlString = selectedChapter.imageURL {
+            cell.chapterImageView.af_setImageWithURL(NSURL(string: imageUrlString)!)
+        }
+        return cell
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

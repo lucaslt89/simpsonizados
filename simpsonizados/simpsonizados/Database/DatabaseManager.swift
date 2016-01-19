@@ -57,6 +57,7 @@ class DatabaseManager: NSObject {
 
         existingSeason!.seasonName = seasonName
         existingSeason!.chaptersCount = chaptersCount
+        (existingSeason?.valueForKey("chapters") as! NSMutableSet).removeAllObjects()
 
         do {
             try managedContext.save()
@@ -170,6 +171,22 @@ class DatabaseManager: NSObject {
         }
         
         return [];
+    }
+
+    func extractChaptersFromCSVFile(fileLocation: String) {
+
+        let error: NSErrorPointer = nil
+        if let csv = CSV(contentsOfFile: fileLocation, error: error) {
+            for row in csv.rows {
+                insertUpdateChapterOfSeason(Int(row["Season"]!)!,
+                    name: row["Name"]!,
+                    chapterDescription: row["Description"]!,
+                    imageURL: row["ImageURL"]!,
+                    latinoURL: row["LatinoURL"]!,
+                    spanishURL: row["SpanishURL"]!,
+                    englishURL: row["EnglishURL"]!)
+            }
+        }
     }
 
 }
