@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+    <entity name="Chapter" representedClassName=".Chapter" syncable="YES">
+        <attribute name="chapterDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="englishURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latinoURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spanishURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="season" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Season" inverseName="chapters" inverseEntity="Season" syncable="YES"/>
+    </entity>
+    <entity name="Season" representedClassName=".Season" syncable="YES">
+        <attribute name="chaptersCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="seasonName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chapters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Chapter" inverseName="season" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Chapter" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="Season" positionX="-281" positionY="18" width="128" height="90"/>
+    </elements>
+</model>

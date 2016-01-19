@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0143B791C4EB52700E6485C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0143B781C4EB52700E6485C /* DatabaseManager.swift */; };
+		A0143B991C4EB6E500E6485C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0143B981C4EB6E500E6485C /* CoreData.framework */; };
+		A08B40511C57E3B0000BB031 /* SeasonSelectorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B40501C57E3B0000BB031 /* SeasonSelectorCollectionViewController.swift */; };
+		A08B40541C57E3B0000BB031 /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B40531C57E3B0000BB031 /* SeasonCollectionViewCell.swift */; };
+		A08B40581C57E3B0000BB031 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A08B40561C57E3B0000BB031 /* Model.xcdatamodeld */; };
 		A0CD706A1C4AD38400231089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD70691C4AD38400231089 /* AppDelegate.swift */; };
-		A0CD706C1C4AD38400231089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD706B1C4AD38400231089 /* ViewController.swift */; };
 		A0CD706F1C4AD38400231089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CD706D1C4AD38400231089 /* Main.storyboard */; };
 		A0CD70711C4AD38400231089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CD70701C4AD38400231089 /* Assets.xcassets */; };
+		A0CD707A1C4AE00B00231089 /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CD70791C4AE00B00231089 /* SeasonViewController.swift */; };
+		A0F1959F1C4EB77F00A462FF /* Season+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959B1C4EB77F00A462FF /* Season+CoreDataProperties.swift */; };
+		A0F195A01C4EB77F00A462FF /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959C1C4EB77F00A462FF /* Season.swift */; };
+		A0F195A11C4EB77F00A462FF /* Chapter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959D1C4EB77F00A462FF /* Chapter+CoreDataProperties.swift */; };
+		A0F195A21C4EB77F00A462FF /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959E1C4EB77F00A462FF /* Chapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0143B781C4EB52700E6485C /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Database/DatabaseManager.swift; sourceTree = "<group>"; };
+		A0143B981C4EB6E500E6485C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A08B40501C57E3B0000BB031 /* SeasonSelectorCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonSelectorCollectionViewController.swift; path = ViewControllers/SeasonSelectorCollectionViewController.swift; sourceTree = "<group>"; };
+		A08B40531C57E3B0000BB031 /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonCollectionViewCell.swift; path = CustomViews/SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
+		A08B40571C57E3B0000BB031 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A0CD70661C4AD38400231089 /* simpsonizados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpsonizados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CD70691C4AD38400231089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0CD706B1C4AD38400231089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0CD706E1C4AD38400231089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0CD70701C4AD38400231089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0CD70721C4AD38400231089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0CD70791C4AE00B00231089 /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeasonViewController.swift; path = ViewControllers/SeasonViewController.swift; sourceTree = "<group>"; };
+		A0F1959B1C4EB77F00A462FF /* Season+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Season+CoreDataProperties.swift"; path = "Database/Entities/Season+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0F1959C1C4EB77F00A462FF /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Season.swift; path = Database/Entities/Season.swift; sourceTree = "<group>"; };
+		A0F1959D1C4EB77F00A462FF /* Chapter+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Chapter+CoreDataProperties.swift"; path = "Database/Entities/Chapter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0F1959E1C4EB77F00A462FF /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chapter.swift; path = Database/Entities/Chapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,16 +45,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0143B991C4EB6E500E6485C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0143B9A1C4EB6FA00E6485C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0143B981C4EB6E500E6485C /* CoreData.framework */,
+			);
+			name = Frameworks;
+			path = simpsonizados;
+			sourceTree = "<group>";
+		};
+		A08B40521C57E3B0000BB031 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A08B40531C57E3B0000BB031 /* SeasonCollectionViewCell.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		A08B40551C57E3B0000BB031 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1959A1C4EB76C00A462FF /* Entities */,
+				A08B40561C57E3B0000BB031 /* Model.xcdatamodeld */,
+				A0143B781C4EB52700E6485C /* DatabaseManager.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		A0CD705D1C4AD38400231089 = {
 			isa = PBXGroup;
 			children = (
 				A0CD70681C4AD38400231089 /* simpsonizados */,
+				A0143B9A1C4EB6FA00E6485C /* Frameworks */,
 				A0CD70671C4AD38400231089 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,13 +99,35 @@
 		A0CD70681C4AD38400231089 /* simpsonizados */ = {
 			isa = PBXGroup;
 			children = (
+				A08B40551C57E3B0000BB031 /* Database */,
+				A08B40521C57E3B0000BB031 /* CustomViews */,
+				A0CD70781C4ADFCD00231089 /* ViewControllers */,
 				A0CD70691C4AD38400231089 /* AppDelegate.swift */,
-				A0CD706B1C4AD38400231089 /* ViewController.swift */,
 				A0CD706D1C4AD38400231089 /* Main.storyboard */,
 				A0CD70701C4AD38400231089 /* Assets.xcassets */,
 				A0CD70721C4AD38400231089 /* Info.plist */,
 			);
 			path = simpsonizados;
+			sourceTree = "<group>";
+		};
+		A0CD70781C4ADFCD00231089 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0CD70791C4AE00B00231089 /* SeasonViewController.swift */,
+				A08B40501C57E3B0000BB031 /* SeasonSelectorCollectionViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0F1959A1C4EB76C00A462FF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1959B1C4EB77F00A462FF /* Season+CoreDataProperties.swift */,
+				A0F1959C1C4EB77F00A462FF /* Season.swift */,
+				A0F1959D1C4EB77F00A462FF /* Chapter+CoreDataProperties.swift */,
+				A0F1959E1C4EB77F00A462FF /* Chapter.swift */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +162,7 @@
 				TargetAttributes = {
 					A0CD70651C4AD38400231089 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Q2399DNW37;
 					};
 				};
 			};
@@ -131,8 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CD706C1C4AD38400231089 /* ViewController.swift in Sources */,
+				A0F195A01C4EB77F00A462FF /* Season.swift in Sources */,
+				A0F195A21C4EB77F00A462FF /* Chapter.swift in Sources */,
 				A0CD706A1C4AD38400231089 /* AppDelegate.swift in Sources */,
+				A08B40541C57E3B0000BB031 /* SeasonCollectionViewCell.swift in Sources */,
+				A0143B791C4EB52700E6485C /* DatabaseManager.swift in Sources */,
+				A08B40581C57E3B0000BB031 /* Model.xcdatamodeld in Sources */,
+				A08B40511C57E3B0000BB031 /* SeasonSelectorCollectionViewController.swift in Sources */,
+				A0CD707A1C4AE00B00231089 /* SeasonViewController.swift in Sources */,
+				A0F195A11C4EB77F00A462FF /* Chapter+CoreDataProperties.swift in Sources */,
+				A0F1959F1C4EB77F00A462FF /* Season+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpsonizados/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.technopix.simpsonizados;
@@ -248,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = simpsonizados/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.technopix.simpsonizados;
@@ -274,8 +354,23 @@
 				A0CD70771C4AD38400231089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A08B40561C57E3B0000BB031 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A08B40571C57E3B0000BB031 /* Model.xcdatamodel */,
+			);
+			currentVersion = A08B40571C57E3B0000BB031 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Database/Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A0CD705E1C4AD38400231089 /* Project object */;
 }
