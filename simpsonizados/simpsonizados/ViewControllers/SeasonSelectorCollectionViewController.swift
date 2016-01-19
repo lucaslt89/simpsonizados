@@ -50,6 +50,26 @@ class SeasonSelectorCollectionViewController: UICollectionViewController {
         performSegueWithIdentifier(ShowSeasonViewControllerSegueIdentifier, sender: nil)
     }
 
+    override func collectionView(collectionView: UICollectionView, didUpdateFocusInContext context: UICollectionViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+
+        let previousView = context.previouslyFocusedView
+        let nextView = context.nextFocusedView
+
+        coordinator.addCoordinatedAnimations({
+            previousView?.layer.borderWidth = 0
+            previousView?.layer.borderColor = UIColor.clearColor().CGColor
+
+            if nextView is UICollectionViewCell {
+                nextView?.layer.borderWidth = 10
+                nextView?.layer.borderColor = UIColor.grayColor().CGColor
+            }
+
+            self.view.layoutIfNeeded()
+            },
+            completion: nil
+        )
+    }
+
     override func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }

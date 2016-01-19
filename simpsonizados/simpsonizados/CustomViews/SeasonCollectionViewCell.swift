@@ -15,4 +15,10 @@ class SeasonCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var seasonLabel: UILabel!
     @IBOutlet weak var seasonImage: UIImageView!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 10;
+        clipsToBounds = true
+    }
+
 }

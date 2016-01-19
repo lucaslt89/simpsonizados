@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="Fkv-l0-9pu">
-                                <rect key="frame" x="20" y="145" width="1880" height="915"/>
+                                <rect key="frame" x="40" y="145" width="1840" height="915"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChapterCellIdentifier" id="hhD-Ho-TlV" customClass="ChapterTableViewCell" customModule="simpsonizados" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="54" width="1880" height="120"/>
+                                        <rect key="frame" x="0.0" y="54" width="1840" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hhD-Ho-TlV" id="sJb-i7-Rav">
-                                            <rect key="frame" x="0.0" y="0.0" width="1880" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1840" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-OX-fhI">
@@ -33,15 +33,18 @@
                                                         <constraint firstAttribute="width" constant="200" id="T9y-BP-SEm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZF-EC-V5s">
-                                                    <rect key="frame" x="229" y="47" width="1626" height="68"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-Kl-Tec">
+                                                    <rect key="frame" x="229" y="5" width="1586" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="VhB-7Z-n4C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-Kl-Tec">
-                                                    <rect key="frame" x="229" y="5" width="1626" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TZF-EC-V5s">
+                                                    <rect key="frame" x="229" y="47" width="1586" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -74,9 +77,9 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="Fkv-l0-9pu" firstAttribute="top" secondItem="XdZ-ss-DPY" secondAttribute="bottom" id="Bld-2s-QhX"/>
-                            <constraint firstItem="Fkv-l0-9pu" firstAttribute="leading" secondItem="XBI-3H-2Mh" secondAttribute="leading" constant="20" id="QIg-uk-yWp"/>
+                            <constraint firstItem="Fkv-l0-9pu" firstAttribute="leading" secondItem="XBI-3H-2Mh" secondAttribute="leading" constant="40" id="QIg-uk-yWp"/>
                             <constraint firstItem="yW6-U2-9Ex" firstAttribute="top" secondItem="Fkv-l0-9pu" secondAttribute="bottom" constant="20" id="Svy-aM-gTm"/>
-                            <constraint firstAttribute="trailing" secondItem="Fkv-l0-9pu" secondAttribute="trailing" constant="20" id="pOS-y2-FhM"/>
+                            <constraint firstAttribute="trailing" secondItem="Fkv-l0-9pu" secondAttribute="trailing" constant="40" id="pOS-y2-FhM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Season 1" id="Jep-Qy-Eh5"/>
@@ -101,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="-4732" y="-1327"/>
         </scene>
-        <!--Season Selector Collection View Controller-->
+        <!--Select a Season-->
         <scene sceneID="Jf1-aK-n7x">
             <objects>
                 <collectionViewController id="rld-nL-ZHv" customClass="SeasonSelectorCollectionViewController" customModule="simpsonizados" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,11 +115,11 @@
                             <size key="itemSize" width="400" height="300"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
+                            <inset key="sectionInset" minX="100" minY="0.0" maxX="100" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeasonCellIdentifier" id="64q-SD-iRU" customClass="SeasonCollectionViewCell" customModule="simpsonizados" customModuleProvider="target">
-                                <rect key="frame" x="50" y="145" width="400" height="300"/>
+                                <rect key="frame" x="100" y="145" width="400" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
@@ -171,7 +174,7 @@
                             <outlet property="delegate" destination="rld-nL-ZHv" id="V5O-dv-YVm"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="OZw-Hw-TpB"/>
+                    <navigationItem key="navigationItem" title="Select a Season" id="OZw-Hw-TpB"/>
                     <connections>
                         <segue destination="38M-eU-Oxf" kind="show" identifier="ShowSeasonViewController" id="sp1-dK-xox"/>
                     </connections>
