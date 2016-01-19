@@ -19,8 +19,6 @@ class SeasonSelectorCollectionViewController: UICollectionViewController {
     }
 
     private func loadSeasons() {
-        DatabaseManager.sharedInstance.insertUpdateSeasonWithNumber(1, chaptersCount: 13)
-
         let fileLocation = NSBundle.mainBundle().pathForResource("Chapters", ofType: "csv")!
         DatabaseManager.sharedInstance.extractChaptersFromCSVFile(fileLocation)
 

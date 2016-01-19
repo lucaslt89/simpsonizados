@@ -14,7 +14,6 @@ import CoreData
 
 extension Season {
 
-    @NSManaged var chaptersCount: NSNumber?
     @NSManaged var seasonName: String?
     @NSManaged var chapters: NSSet?
 

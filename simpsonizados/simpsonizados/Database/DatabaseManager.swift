@@ -30,7 +30,7 @@ class DatabaseManager: NSObject {
 
     // MARK: - Seasons management methods -
 
-    func insertUpdateSeasonWithNumber(season: Int, chaptersCount: Int) {
+    func insertUpdateSeasonWithNumber(season: Int) -> Season {
 
         let seasonName = "Season " + "\(season)"
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -56,7 +56,6 @@ class DatabaseManager: NSObject {
         }
 
         existingSeason!.seasonName = seasonName
-        existingSeason!.chaptersCount = chaptersCount
         (existingSeason?.valueForKey("chapters") as! NSMutableSet).removeAllObjects()
 
         do {
@@ -64,6 +63,8 @@ class DatabaseManager: NSObject {
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
+
+        return existingSeason!
 
     }
 
@@ -139,6 +140,10 @@ class DatabaseManager: NSObject {
             existingSeason = try managedContext.executeFetchRequest(seasonFetchRequest).first as? Season
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
+        }
+
+        if existingSeason == nil {
+            existingSeason = insertUpdateSeasonWithNumber(season)
         }
 
         //----------------------------------------------------------------
