@@ -14,4 +14,11 @@ class ChapterTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        chapterImageView.image = nil
+        nameLabel.text = nil
+        descriptionLabel.text = nil
+    }
+
 }
