@@ -182,6 +182,7 @@ class DatabaseManager: NSObject {
 
         let error: NSErrorPointer = nil
         if let csv = CSV(contentsOfFile: fileLocation, error: error) {
+            var rowIndex = 1;
             for row in csv.rows {
                 insertUpdateChapterOfSeason(Int(row["Season"]!)!,
                     name: row["Name"]!,
@@ -190,6 +191,7 @@ class DatabaseManager: NSObject {
                     latinoURL: row["LatinoURL"]!,
                     spanishURL: row["SpanishURL"]!,
                     englishURL: row["EnglishURL"]!)
+                rowIndex++;
             }
         }
     }

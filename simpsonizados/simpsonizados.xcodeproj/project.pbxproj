@@ -23,6 +23,7 @@
 		A0F195A01C4EB77F00A462FF /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959C1C4EB77F00A462FF /* Season.swift */; };
 		A0F195A11C4EB77F00A462FF /* Chapter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959D1C4EB77F00A462FF /* Chapter+CoreDataProperties.swift */; };
 		A0F195A21C4EB77F00A462FF /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1959E1C4EB77F00A462FF /* Chapter.swift */; };
+		A0FB38571C519C20000F4808 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB38561C519C20000F4808 /* HTMLParser.swift */; };
 		D5FA794F69EDC546851151BB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F413F092961C99FFD07D2A38 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		A0F1959C1C4EB77F00A462FF /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Season.swift; path = Database/Entities/Season.swift; sourceTree = "<group>"; };
 		A0F1959D1C4EB77F00A462FF /* Chapter+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Chapter+CoreDataProperties.swift"; path = "Database/Entities/Chapter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0F1959E1C4EB77F00A462FF /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chapter.swift; path = Database/Entities/Chapter.swift; sourceTree = "<group>"; };
+		A0FB38561C519C20000F4808 /* HTMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTMLParser.swift; path = Resources/HTMLParser.swift; sourceTree = "<group>"; };
 		E9E620B77BEB2B31ECBE1B59 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F413F092961C99FFD07D2A38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A0E7A9131C4EC9650062FFC5 /* Chapters.csv */,
+				A0FB38561C519C20000F4808 /* HTMLParser.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				A0CD707A1C4AE00B00231089 /* SeasonViewController.swift in Sources */,
 				A0E7A9171C4ECDFD0062FFC5 /* CSV.swift in Sources */,
 				A0F195A11C4EB77F00A462FF /* Chapter+CoreDataProperties.swift in Sources */,
+				A0FB38571C519C20000F4808 /* HTMLParser.swift in Sources */,
 				A0F1959F1C4EB77F00A462FF /* Season+CoreDataProperties.swift in Sources */,
 				A0E7A9111C4EC6DC0062FFC5 /* ChapterTableViewCell.swift in Sources */,
 			);
