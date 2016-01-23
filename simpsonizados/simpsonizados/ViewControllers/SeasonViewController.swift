@@ -49,11 +49,66 @@ class SeasonViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
         let selectedChapter = chapters[indexPath.row]
 
+        if let uniqueVersionURL = extractUniqueURLFromChapter(selectedChapter) {
+            playVideoFromURL(uniqueVersionURL)
+        }
+        else {
+            showSelectVersionAlertForChapter(selectedChapter)
+        }
+    }
+
+    // MARK: - Play Video methods -
+
+    private func showSelectVersionAlertForChapter(chapter:Chapter) {
+        let alertController = UIAlertController(title: "Select a language", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+
+        if let latinoURL = chapter.latinoURL where !latinoURL.isEmpty {
+            let action = UIAlertAction(title: "Español Latino", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                self.playVideoFromURL(latinoURL)
+            })
+            alertController.addAction(action)
+        }
+
+        if let spanishURL = chapter.spanishURL where !spanishURL.isEmpty {
+            let action = UIAlertAction(title: "Español", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                self.playVideoFromURL(spanishURL)
+            })
+            alertController.addAction(action)
+        }
+
+        if let englishURL = chapter.englishURL where !englishURL.isEmpty {
+            let action = UIAlertAction(title: "English", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                self.playVideoFromURL(englishURL)
+            })
+            alertController.addAction(action)
+        }
+
+        let action = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+            alertController.dismissViewControllerAnimated(true, completion: nil)
+        })
+        alertController.addAction(action)
+
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    private func extractUniqueURLFromChapter(chapter: Chapter) -> String? {
+        if chapter.latinoURL != nil && chapter.spanishURL == nil && chapter.englishURL == nil {
+            return chapter.latinoURL!
+        }
+        else if chapter.latinoURL == nil && chapter.spanishURL != nil && chapter.englishURL == nil {
+            return chapter.spanishURL!
+        }
+        else if chapter.latinoURL == nil && chapter.spanishURL == nil && chapter.englishURL != nil {
+            return chapter.englishURL!
+        }
+        return nil
+    }
+
+    private func playVideoFromURL(url: String) {
         let avPlayerController = AVPlayerViewController()
-        avPlayerController.player = AVPlayer(URL: NSURL(string: selectedChapter.latinoURL!)!)
+        avPlayerController.player = AVPlayer(URL: NSURL(string: url)!)
 
         avPlayerController.player?.play()
 
